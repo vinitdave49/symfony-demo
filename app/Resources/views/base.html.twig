@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <link rel="stylesheet" href="{{ asset('resources/css/bootstrap.min.css') }}">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{{ asset('resources/css/AdminLTE.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('resources/css/skin-red.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('resources/css/red.css') }}"> 
+        
+        <!-- jQuery 1.12.0 -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="{{ asset('resources/js/bootstrap.min.js') }}"></script>
+        <!-- iCheck -->
+        <script src="{{ asset('resources/js/icheck.min.js') }}"></script>
+        <script>
+          $(function () {
+            $('input').iCheck({
+              checkboxClass: 'icheckbox_square-red',
+              radioClass: 'iradio_square-red',
+              increaseArea: '20%' // optional
+            });
+          });
+        </script>
+        {% block stylesheets %}{% endblock %}
+        
+        {% block javascripts %}{% endblock %}
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block inlinejavascripts %}{% endblock %}
+    </body>
+</html>
