@@ -119,9 +119,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::loginAction',  '_route' => 'login',);
         }
 
-        // createactivityTemplate
-        if ($pathinfo === '/createactivityTemplate') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createActivityTemplateAction',  '_route' => 'createactivityTemplate',);
+        if (0 === strpos($pathinfo, '/create')) {
+            // createactivityTemplate
+            if ($pathinfo === '/createactivityTemplate') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createActivityTemplateAction',  '_route' => 'createactivityTemplate',);
+            }
+
+            // createuser
+            if ($pathinfo === '/createuser') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createuserAction',  '_route' => 'createuser',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

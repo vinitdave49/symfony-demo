@@ -5,6 +5,8 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Entity\User;
 
 class DefaultController extends Controller
 {
@@ -32,7 +34,19 @@ class DefaultController extends Controller
         $loginname = $request->request->get("wLoginId");
         $password = $request->request->get("wPass");
         
-        return $this->render('cloudadmin/home.html.twig', array('loginname' => $loginname));
+        $encPass = sha1($password);
+        //console.log("Encoded Password: ".$encPass);
+        
+        $user = $this->getDoctrine()
+                ->getRepository('AppBundle:User')
+                ->findOneBy(array('loginname'=>$loginname, 'password'=>$encPass));
+        
+        if (isset($user)){
+            return $this->render('cloudadmin/home.html.twig', array('loginname' => $user->getFirstname()));    
+        } else {
+            return new Response('<h1>Invalid User Credentials!!!</h1>');
+        }
+        
     }
     /**
      * @Route("createactivityTemplate", name="createactivityTemplate")
@@ -41,5 +55,12 @@ class DefaultController extends Controller
     {
         return $this->render('cloudadmin/createtemplates/createactivitytemplate.html.twig');
     }
+    /**
+     * @Route("createuser", name="createuser")
+     */
+    public function createuserAction(Request $request)
+    {
+        return $this->render('cloudadmin/admin/createuser.html.twig');
+    }    
     
 }
