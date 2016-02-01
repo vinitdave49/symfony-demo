@@ -125,9 +125,32 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createActivityTemplateAction',  '_route' => 'createactivityTemplate',);
             }
 
+            // createworkerTemplate
+            if ($pathinfo === '/createworkerTemplate') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createWorkerTemplateAction',  '_route' => 'createworkerTemplate',);
+            }
+
+            // createtaskqueueTemplate
+            if ($pathinfo === '/createtaskqueueTemplate') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createTaskQueueTemplateAction',  '_route' => 'createtaskqueueTemplate',);
+            }
+
             // createuser
             if ($pathinfo === '/createuser') {
                 return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createuserAction',  '_route' => 'createuser',);
+            }
+
+            if (0 === strpos($pathinfo, '/createproject')) {
+                // createproject
+                if ($pathinfo === '/createproject') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createprojecttemplateAction',  '_route' => 'createproject',);
+                }
+
+                // createprojectaction
+                if ($pathinfo === '/createprojectaction') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createprojectAction',  '_route' => 'createprojectaction',);
+                }
+
             }
 
         }

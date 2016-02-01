@@ -1,0 +1,138 @@
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box box-danger">
+				<div class="box-header">
+					<h3 class="box-title">Create Project</h3>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+					</div>
+				</div>
+				<div class="box-body">
+					<div class="col-md-6">
+						<div class="input-group input-group-sm">
+						<input type="text" class="form-control" id="projectName" name="projectName">
+							<span class="input-group-btn">
+							  <button type="button" id="btnsubmit" class="btn btn-block btn-danger">Create Project</button>
+							</span>
+					  </div>
+					  <!-- /input-group -->
+					 </div>
+				</div>
+			</div>
+			<div class="box box-danger">
+				<div class="box-header">
+					<h3 class="box-title">Project List</h3>
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+					<div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+						<div class="row">
+ 						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+									<thead>
+										<tr role="row">
+											<th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Project ID: activate to sort column descending" style="width: 180px;">Project ID</th>
+											<th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Project Name: activate to sort column ascending" style="width: 223px;">Project Name</th>
+											<th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Project Workspace: activate to sort column ascending" style="width: 223px;">Project Workspace</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- Enter the code to display the prject table details -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+					<div class="row">
+						<div class="col-sm-5">
+							<!-- <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+							</div> -->
+							<div class="col-sm-7">
+								<div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+									<ul class="pagination">
+										<li class="paginate_button previous disabled" id="example1_previous">
+											<a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a>
+										</li>
+										<li class="paginate_button active">
+											<a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a>
+										</li>
+										<li class="paginate_button ">
+											<a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">2</a>
+										</li>
+										<li class="paginate_button next" id="example1_next">
+											<a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- /.box-body -->
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+    $(function() {
+        var i = 0;
+        $("#btnsubmit").bind("click", function() {
+            var data = $("#projectName").val();
+            var str_json = JSON.stringify(data);
+            $.ajax({
+                url: "createprojectaction",
+                async: true,
+                type: "POST",
+                data: str_json,
+                dataType: "text",
+                success: function(resultData) {
+                    $("#alert").addClass("in alert-success");
+                    alert(resultData);
+                },
+                error: function() {
+
+                }
+            })
+        });
+        $("body").on("click", ".remove", function() {
+            $(this).closest("div").remove();
+        });
+        $("#alertClose").click(function() {
+            $(this).parent().removeClass('in');
+        });
+    });
+    $(document).ready(function() {
+        //var table = $("#example1").DataTable();
+        $("#example1 tbody").on('click', 'tr', function() {
+            //var data = table.row(this).data();
+            var data = $(this).find('td.projectSpace').html();
+            alert("You clicked on row: Project ID: " + data);
+            //window.open("configureProject.php", "PopupWindow", "width=600,height=600,scrollbars=yes,resizable=no");
+
+            var form = document.createElement("form");
+            form.setAttribute("method", "post");
+            form.setAttribute("action", "configureProject.php");
+            form.setAttribute("target", "Configure Project");
+            var param = {
+                'workspaceid': data
+            };
+            for (var i in param) {
+                if (param.hasOwnProperty(i)) {
+                    var input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = i;
+                    input.value = param[i];
+                    form.appendChild(input);
+                }
+            }
+            document.body.appendChild(form);
+            //note I am using a post.htm page since I did not want to make double request to the page
+            //it might have some Page_Load call which might screw things up.
+            window.open("post.htm", "Configure Project", "width=730,height=345,left=600,top=600,resizable=yes,scrollbars=yes");
+            form.submit();
+            document.body.removeChild(form);
+        });
+    });
+</script>
