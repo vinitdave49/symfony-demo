@@ -1,0 +1,181 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Configure Project{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ asset('resources/js/app.min.js') }}"></script>
+	<script href="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+{% endblock %}
+{% block body %}
+    <body class="hold-transition skin-red sidebar-mini">
+
+        <div class="wrapper">
+
+            <!-- Main Header -->
+            <header class="main-header">
+
+                <!-- Logo -->
+                <a href="home" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <span class="logo-mini"><b>C</b>C</span>
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg"><b>AdminCC</b></span>
+                </a>
+
+                <!-- Header Navbar -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    </a>
+                    <span class="sr-only">Toggle navigation</span>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar Menu -->
+                    <ul class="sidebar-menu">
+                        <li class="header">Menu</li>
+                        <!-- Optionally, you can add icons to the links -->
+                        <li class="active">
+                            <a href="#">
+                                <i class="fa fa-link"></i>
+                                <span>AdminCommCloud</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-share"></i>
+                                <span>Create/Edit</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu menu-open" style="display: none;">
+                                <li>
+                                    <a href="#" id="taskqueue">
+                                        <i class="fa fa-link"></i>
+                                        <span>TaskQueue</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="worker">
+                                        <i class="fa fa-link"></i>
+                                        <span>Worker</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="workflow">
+                                        <i class="fa fa-link"></i>
+                                        <span>Workflow</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="activity">
+                                        <i class="fa fa-link"></i>
+                                        <span>Activity</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.sidebar-menu -->
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                {{ projectname }}: {{ workspaceid }}
+              </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li class="active">AdminCommCloud</li>
+                    </ol>
+
+                </section>
+                <div class="alert alert-info alert-block fade" id="alert">
+                    <button type="button" class="close" aria-hidden="true" id="alertClose">×</button>
+                    <h4><i class="icon fa fa-ban"></i> Success!</h4>
+                    You have successfully created!!!
+                </div>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        <div class="col-md-12" id="createcontainer">
+                            <!--<div class="center"><img src="resources/images/sampleApp.JPG" width="800" height="451"></div>-->
+                        </div>
+                    </div>
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <!-- To the right -->
+                <div class="pull-right hidden-xs">
+                    Anything you want
+                </div>
+                <!-- Default to the left -->
+                <strong>Copyright &copy; 2015 <a href="#">Cognizant Technology Solutions</a>.</strong> All rights reserved.
+            </footer>
+
+        </div>
+        <!-- ./wrapper -->
+    </body>
+{% endblock %}
+
+{% block inlinejavascripts %}
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+		$('#worker').click(function(){
+	            $('#createcontainer').load('createworker'), function( response, status, xhr ) {
+                if ( status == "error" ) {
+                    var msg = "Sorry but there was an error: ";
+                    console.log( msg + xhr.status + " " + xhr.statusText );
+                }
+            }
+		});
+
+		$('#activity').click(function(){
+		    //alert ("Hello");
+            $('#createcontainer').load('createactivity'), function( response, status, xhr ) {
+                if ( status == "error" ) {
+                    var msg = "Sorry but there was an error: ";
+                    console.log( msg + xhr.status + " " + xhr.statusText );
+                }
+            }
+		});
+
+		$('#taskqueue').click(function(){
+			//alert("Create TaskQueue Template!!!");
+            $('#createcontainer').load('createtaskqueue'), function( response, status, xhr ) {
+                if ( status == "error" ) {
+                    var msg = "Sorry but there was an error: ";
+                    console.log( msg + xhr.status + " " + xhr.statusText );
+                }
+            }
+		});
+
+		$('#workflow').click(function(){
+	            $('#createcontainer').load('createworkflow'), function( response, status, xhr ) {
+                if ( status == "error" ) {
+                    var msg = "Sorry but there was an error: ";
+                    console.log( msg + xhr.status + " " + xhr.statusText );
+                }
+            }
+		});
+	});
+	</script>
+{% endblock %}

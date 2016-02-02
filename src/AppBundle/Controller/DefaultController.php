@@ -82,7 +82,23 @@ class DefaultController extends Controller
      */
     public function createprojecttemplateAction(Request $request)
     {
-        return $this->render('cloudadmin/admin/createproject.html.twig');
+        $projects = $this->getDoctrine()
+                ->getRepository('AppBundle:Project')
+                ->findAll();
+
+        return $this->render('cloudadmin/admin/createproject.html.twig', array('projects'=>$projects));
+    }
+    /**
+     * @Route("configureproject", name="configureproject")
+     */
+    public function configureprojectAction(Request $request)
+    {
+        $workspaceid = $request->request->get("workspaceid");
+        $projectname = $request->request->get("projectname");
+        $session = $this->get('session');
+        $session->set('workspaceid', $workspaceid);
+        //$this->getRequest()->getSession()->set('workspaceid', $workspaceid);
+        return $this->render('cloudadmin/admin/configureproject.html.twig', array('projectname'=>$projectname, 'workspaceid'=>$workspaceid));
     }
     /**
      * @Route("createprojectaction", name="createprojectaction")
@@ -90,15 +106,42 @@ class DefaultController extends Controller
     public function createprojectAction(Request $request)
     {
         $projectname = json_decode(file_get_contents("php://input"));
-        //include_once $this->get('kernel')->getRootDir().'/../vendor/twilio/sdk/Services/Twilio/CapabilityTaskRouter.php';
+        include_once $this->get('kernel')->getRootDir().'/../vendor/twilio/sdk/Services/Twilio.php';
+        $path = $this->get('kernel')->getRootDir();
+        $accountSid = 'AC0f18494502dee91457252ff7b2bada6a';
+        $authToken = '2f430f7691acb543889ef3a721c1c096';
+        $params = array();
+        $params['EventCallbackUrl'] = 'http://requestb.in/vh9reovh';
+        $params['Template'] = 'FIFO';
+
+        $taskrouterclient = new \TaskRouter_Services_Twilio($accountSid, $authToken, null);;
+
+        $workspace = $taskrouterclient->workspaces->create($projectname, $params);
+        $workspaceId = $workspace->sid;
+
         $new_project = new Project();
         $new_project->setProjectname($projectname);
-        $new_project->setWorkspaceid("aasdqwezxzc");
+        $new_project->setWorkspaceid($workspaceId);
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($new_project);
         $em->flush();
 
-        return new Response('<h1>Project Created!!!'.$projectname.'</h1>');
+        return new Response('<h1>Project Created!!!'.$projectname.' Id: '.$workspaceId.'</h1>');
+    }
+    /**
+     * @Route("createworker", name="createworker")
+     */
+    public function createworkerAction(Request $request)
+    {
+        $textboxes = $this->getDoctrine()
+            ->getRepository('AppBundle:TemplateDetails')
+            ->findBy(array('attributeType'=>1));
+
+        $checkboxes = $this->getDoctrine()
+            ->getRepository('AppBundle:TemplateDetails')
+            ->findBy(array('attributeType'=>2));
+
+        return $this->render('cloudadmin/admin/createworker.html.twig', array('textboxes'=>$textboxes, 'checkboxes'=>$checkboxes));
     }
 }

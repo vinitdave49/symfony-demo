@@ -1,4 +1,4 @@
-<section class="content">
+<section class="content" >
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="box box-danger">
@@ -40,7 +40,13 @@
 										</tr>
 									</thead>
 									<tbody>
-										<!-- Enter the code to display the prject table details -->
+											{% for project in projects %}
+												<tr>
+													<td class="projectId"> {{ project.id }}</td>
+													<td class="projectName"> {{ project.projectname }} </td>
+													<td class="projectSpace"> {{ project.workspaceid }} </td>
+												</tr>
+											{% endfor %}
 									</tbody>
 								</table>
 							</div>
@@ -107,16 +113,20 @@
         //var table = $("#example1").DataTable();
         $("#example1 tbody").on('click', 'tr', function() {
             //var data = table.row(this).data();
-            var data = $(this).find('td.projectSpace').html();
-            alert("You clicked on row: Project ID: " + data);
+            var workspaceid = $(this).find('td.projectSpace').html();
+            var projectname = $(this).find('td.projectName').html();
+            //alert("You clicked on row: Project ID: " + workspaceid + " ProjectName: "+projectname);
+
+            //$('#example1_wrapper').hide();
             //window.open("configureProject.php", "PopupWindow", "width=600,height=600,scrollbars=yes,resizable=no");
 
             var form = document.createElement("form");
             form.setAttribute("method", "post");
-            form.setAttribute("action", "configureProject.php");
+            form.setAttribute("action", "configureproject");
             form.setAttribute("target", "Configure Project");
             var param = {
-                'workspaceid': data
+                'workspaceid': workspaceid,
+                'projectname': projectname
             };
             for (var i in param) {
                 if (param.hasOwnProperty(i)) {
@@ -133,6 +143,7 @@
             window.open("post.htm", "Configure Project", "width=730,height=345,left=600,top=600,resizable=yes,scrollbars=yes");
             form.submit();
             document.body.removeChild(form);
+
         });
     });
 </script>

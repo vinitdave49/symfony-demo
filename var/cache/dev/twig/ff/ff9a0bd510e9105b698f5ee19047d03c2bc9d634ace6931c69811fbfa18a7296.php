@@ -15,11 +15,11 @@ class __TwigTemplate_2ddf64ccdaca4616395e340fba854d77a7dd1dae0772b334e2472e7e2b4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a219bc61917af8c4c22c290493f5baf8f2124a0591147fd99a7632a4f8a18296 = $this->env->getExtension("native_profiler");
-        $__internal_a219bc61917af8c4c22c290493f5baf8f2124a0591147fd99a7632a4f8a18296->enter($__internal_a219bc61917af8c4c22c290493f5baf8f2124a0591147fd99a7632a4f8a18296_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "cloudadmin/admin/createproject.html.twig"));
+        $__internal_6177f238c3bcbe62c0518eea09ef3732daf3f481fa1aee29ac2678790409c1f0 = $this->env->getExtension("native_profiler");
+        $__internal_6177f238c3bcbe62c0518eea09ef3732daf3f481fa1aee29ac2678790409c1f0->enter($__internal_6177f238c3bcbe62c0518eea09ef3732daf3f481fa1aee29ac2678790409c1f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "cloudadmin/admin/createproject.html.twig"));
 
         // line 1
-        echo "<section class=\"content\">
+        echo "<section class=\"content\" >
 \t<div class=\"row\">
 \t\t<div class=\"col-xs-12\">
 \t\t\t<div class=\"box box-danger\">
@@ -61,8 +61,33 @@ class __TwigTemplate_2ddf64ccdaca4616395e340fba854d77a7dd1dae0772b334e2472e7e2b4
 \t\t\t\t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t\t\t</thead>
 \t\t\t\t\t\t\t\t\t<tbody>
-\t\t\t\t\t\t\t\t\t\t<!-- Enter the code to display the prject table details -->
-\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t\t\t\t";
+        // line 43
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["projects"]) ? $context["projects"] : $this->getContext($context, "projects")));
+        foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
+            // line 44
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"projectId\"> ";
+            // line 45
+            echo twig_escape_filter($this->env, $this->getAttribute($context["project"], "id", array()), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"projectName\"> ";
+            // line 46
+            echo twig_escape_filter($this->env, $this->getAttribute($context["project"], "projectname", array()), "html", null, true);
+            echo " </td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"projectSpace\"> ";
+            // line 47
+            echo twig_escape_filter($this->env, $this->getAttribute($context["project"], "workspaceid", array()), "html", null, true);
+            echo " </td>
+\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['project'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 50
+        echo "\t\t\t\t\t\t\t\t\t</tbody>
 \t\t\t\t\t\t\t\t</table>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -128,16 +153,20 @@ class __TwigTemplate_2ddf64ccdaca4616395e340fba854d77a7dd1dae0772b334e2472e7e2b4
         //var table = \$(\"#example1\").DataTable();
         \$(\"#example1 tbody\").on('click', 'tr', function() {
             //var data = table.row(this).data();
-            var data = \$(this).find('td.projectSpace').html();
-            alert(\"You clicked on row: Project ID: \" + data);
+            var workspaceid = \$(this).find('td.projectSpace').html();
+            var projectname = \$(this).find('td.projectName').html();
+            //alert(\"You clicked on row: Project ID: \" + workspaceid + \" ProjectName: \"+projectname);
+
+            //\$('#example1_wrapper').hide();
             //window.open(\"configureProject.php\", \"PopupWindow\", \"width=600,height=600,scrollbars=yes,resizable=no\");
 
             var form = document.createElement(\"form\");
             form.setAttribute(\"method\", \"post\");
-            form.setAttribute(\"action\", \"configureProject.php\");
+            form.setAttribute(\"action\", \"configureproject\");
             form.setAttribute(\"target\", \"Configure Project\");
             var param = {
-                'workspaceid': data
+                'workspaceid': workspaceid,
+                'projectname': projectname
             };
             for (var i in param) {
                 if (param.hasOwnProperty(i)) {
@@ -154,11 +183,12 @@ class __TwigTemplate_2ddf64ccdaca4616395e340fba854d77a7dd1dae0772b334e2472e7e2b4
             window.open(\"post.htm\", \"Configure Project\", \"width=730,height=345,left=600,top=600,resizable=yes,scrollbars=yes\");
             form.submit();
             document.body.removeChild(form);
+
         });
     });
 </script>";
         
-        $__internal_a219bc61917af8c4c22c290493f5baf8f2124a0591147fd99a7632a4f8a18296->leave($__internal_a219bc61917af8c4c22c290493f5baf8f2124a0591147fd99a7632a4f8a18296_prof);
+        $__internal_6177f238c3bcbe62c0518eea09ef3732daf3f481fa1aee29ac2678790409c1f0->leave($__internal_6177f238c3bcbe62c0518eea09ef3732daf3f481fa1aee29ac2678790409c1f0_prof);
 
     }
 
@@ -167,12 +197,17 @@ class __TwigTemplate_2ddf64ccdaca4616395e340fba854d77a7dd1dae0772b334e2472e7e2b4
         return "cloudadmin/admin/createproject.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  22 => 1,);
+        return array (  90 => 50,  81 => 47,  77 => 46,  73 => 45,  70 => 44,  66 => 43,  22 => 1,);
     }
 }
-/* <section class="content">*/
+/* <section class="content" >*/
 /* 	<div class="row">*/
 /* 		<div class="col-xs-12">*/
 /* 			<div class="box box-danger">*/
@@ -214,7 +249,13 @@ class __TwigTemplate_2ddf64ccdaca4616395e340fba854d77a7dd1dae0772b334e2472e7e2b4
 /* 										</tr>*/
 /* 									</thead>*/
 /* 									<tbody>*/
-/* 										<!-- Enter the code to display the prject table details -->*/
+/* 											{% for project in projects %}*/
+/* 												<tr>*/
+/* 													<td class="projectId"> {{ project.id }}</td>*/
+/* 													<td class="projectName"> {{ project.projectname }} </td>*/
+/* 													<td class="projectSpace"> {{ project.workspaceid }} </td>*/
+/* 												</tr>*/
+/* 											{% endfor %}*/
 /* 									</tbody>*/
 /* 								</table>*/
 /* 							</div>*/
@@ -281,16 +322,20 @@ class __TwigTemplate_2ddf64ccdaca4616395e340fba854d77a7dd1dae0772b334e2472e7e2b4
 /*         //var table = $("#example1").DataTable();*/
 /*         $("#example1 tbody").on('click', 'tr', function() {*/
 /*             //var data = table.row(this).data();*/
-/*             var data = $(this).find('td.projectSpace').html();*/
-/*             alert("You clicked on row: Project ID: " + data);*/
+/*             var workspaceid = $(this).find('td.projectSpace').html();*/
+/*             var projectname = $(this).find('td.projectName').html();*/
+/*             //alert("You clicked on row: Project ID: " + workspaceid + " ProjectName: "+projectname);*/
+/* */
+/*             //$('#example1_wrapper').hide();*/
 /*             //window.open("configureProject.php", "PopupWindow", "width=600,height=600,scrollbars=yes,resizable=no");*/
 /* */
 /*             var form = document.createElement("form");*/
 /*             form.setAttribute("method", "post");*/
-/*             form.setAttribute("action", "configureProject.php");*/
+/*             form.setAttribute("action", "configureproject");*/
 /*             form.setAttribute("target", "Configure Project");*/
 /*             var param = {*/
-/*                 'workspaceid': data*/
+/*                 'workspaceid': workspaceid,*/
+/*                 'projectname': projectname*/
 /*             };*/
 /*             for (var i in param) {*/
 /*                 if (param.hasOwnProperty(i)) {*/
@@ -307,6 +352,7 @@ class __TwigTemplate_2ddf64ccdaca4616395e340fba854d77a7dd1dae0772b334e2472e7e2b4
 /*             window.open("post.htm", "Configure Project", "width=730,height=345,left=600,top=600,resizable=yes,scrollbars=yes");*/
 /*             form.submit();*/
 /*             document.body.removeChild(form);*/
+/* */
 /*         });*/
 /*     });*/
 /* </script>*/

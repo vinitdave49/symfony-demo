@@ -15,17 +15,13 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5e867511c3c47eb2b274638fe32d31dc5f140669c3e48f9425a181cb996e4bee = $this->env->getExtension("native_profiler");
-        $__internal_5e867511c3c47eb2b274638fe32d31dc5f140669c3e48f9425a181cb996e4bee->enter($__internal_5e867511c3c47eb2b274638fe32d31dc5f140669c3e48f9425a181cb996e4bee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "cloudadmin/createtemplates/createactivitytemplate.html.twig"));
+        $__internal_37abf16607d10c0299731f6e3181b5c3935d0501b5abb2ad109c48fd9b77ffcf = $this->env->getExtension("native_profiler");
+        $__internal_37abf16607d10c0299731f6e3181b5c3935d0501b5abb2ad109c48fd9b77ffcf->enter($__internal_37abf16607d10c0299731f6e3181b5c3935d0501b5abb2ad109c48fd9b77ffcf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "cloudadmin/createtemplates/createactivitytemplate.html.twig"));
 
         // line 1
-        echo "<div class=\"alert alert-info alert-block fade\" id=\"alert\">
-    <button type=\"button\" class=\"close\" aria-hidden=\"true\" id=\"alertClose\">×</button>
-    <h4><i class=\"icon fa fa-ban\"></i> Alert!</h4> Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
-</div>
-<section class=\"content\">
+        echo "<section class=\"content\">
     <div class=\"row\">
-        <div class=\"col-md-6\">
+        <div class=\"col-md-12\">
             <div class=\"box box-danger\">
                 <div class=\"box-header with-border\">
                     <h3 class=\"box-title\">Create Activity Template</h3>
@@ -53,10 +49,6 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
                 </div>
                 <!-- /.box-body -->
             </div>
-        </div>
-        <div class=\"col-md-3\">
-        </div>
-        <div class=\"col-md-3\">
         </div>
     </div>
 </section>
@@ -99,9 +91,9 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
             alert(\"Remove called\");
             \$(this).closest(\"div\").remove();
         });*/
-        \$(\"#remove\").click(function(){
-           alert(\"Remove button is clicked!!!\"); 
-        });
+        // \$(\"#remove\").click(function(){
+        //   alert(\"Remove button is clicked!!!\");
+        // });
         \$(\"#alertClose\").click(function() {
             \$(this).parent().removeClass('in');
         });
@@ -111,16 +103,16 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
         return '<input name = \"DynamicTextBox\" type=\"text\" value = \"' + value + '\" placeholder=\"Attribute Name\"/>' +
             '<input type=\"button\" id=\"remove\" value=\"Remove\" class=\"btn btn-danger btn-block btn-flat\" onClick=\"removeElement(\\'activityTemplateContainer\\', \\'element\\');\" />'
     }
-    
+
     function removeElement(parentDiv, childDiv){
      if (childDiv == parentDiv) {
           alert(\"The parent div cannot be removed.\");
         }
-     else if (document.getElementById(childDiv)) {     
+     else if (document.getElementById(childDiv)) {
           var child = document.getElementById(childDiv);
           var parent = document.getElementById(parentDiv);
           parent.removeChild(child);
-        } 
+        }
      else {
           alert(\"Child div has already been removed or does not exist.\");
           return false;
@@ -128,7 +120,7 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
     }
 </script>";
         
-        $__internal_5e867511c3c47eb2b274638fe32d31dc5f140669c3e48f9425a181cb996e4bee->leave($__internal_5e867511c3c47eb2b274638fe32d31dc5f140669c3e48f9425a181cb996e4bee_prof);
+        $__internal_37abf16607d10c0299731f6e3181b5c3935d0501b5abb2ad109c48fd9b77ffcf->leave($__internal_37abf16607d10c0299731f6e3181b5c3935d0501b5abb2ad109c48fd9b77ffcf_prof);
 
     }
 
@@ -142,13 +134,9 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
         return array (  22 => 1,);
     }
 }
-/* <div class="alert alert-info alert-block fade" id="alert">*/
-/*     <button type="button" class="close" aria-hidden="true" id="alertClose">×</button>*/
-/*     <h4><i class="icon fa fa-ban"></i> Alert!</h4> Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.*/
-/* </div>*/
 /* <section class="content">*/
 /*     <div class="row">*/
-/*         <div class="col-md-6">*/
+/*         <div class="col-md-12">*/
 /*             <div class="box box-danger">*/
 /*                 <div class="box-header with-border">*/
 /*                     <h3 class="box-title">Create Activity Template</h3>*/
@@ -176,10 +164,6 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
 /*                 </div>*/
 /*                 <!-- /.box-body -->*/
 /*             </div>*/
-/*         </div>*/
-/*         <div class="col-md-3">*/
-/*         </div>*/
-/*         <div class="col-md-3">*/
 /*         </div>*/
 /*     </div>*/
 /* </section>*/
@@ -222,9 +206,9 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
 /*             alert("Remove called");*/
 /*             $(this).closest("div").remove();*/
 /*         });*//* */
-/*         $("#remove").click(function(){*/
-/*            alert("Remove button is clicked!!!"); */
-/*         });*/
+/*         // $("#remove").click(function(){*/
+/*         //   alert("Remove button is clicked!!!");*/
+/*         // });*/
 /*         $("#alertClose").click(function() {*/
 /*             $(this).parent().removeClass('in');*/
 /*         });*/
@@ -234,16 +218,16 @@ class __TwigTemplate_8cb04646dfe5a35d90ad79e8b0cf77775a80ba3a21e01d23d0176593429
 /*         return '<input name = "DynamicTextBox" type="text" value = "' + value + '" placeholder="Attribute Name"/>' +*/
 /*             '<input type="button" id="remove" value="Remove" class="btn btn-danger btn-block btn-flat" onClick="removeElement(\'activityTemplateContainer\', \'element\');" />'*/
 /*     }*/
-/*     */
+/* */
 /*     function removeElement(parentDiv, childDiv){*/
 /*      if (childDiv == parentDiv) {*/
 /*           alert("The parent div cannot be removed.");*/
 /*         }*/
-/*      else if (document.getElementById(childDiv)) {     */
+/*      else if (document.getElementById(childDiv)) {*/
 /*           var child = document.getElementById(childDiv);*/
 /*           var parent = document.getElementById(parentDiv);*/
 /*           parent.removeChild(child);*/
-/*         } */
+/*         }*/
 /*      else {*/
 /*           alert("Child div has already been removed or does not exist.");*/
 /*           return false;*/

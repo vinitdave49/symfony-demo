@@ -119,36 +119,49 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::loginAction',  '_route' => 'login',);
         }
 
-        if (0 === strpos($pathinfo, '/create')) {
-            // createactivityTemplate
-            if ($pathinfo === '/createactivityTemplate') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createActivityTemplateAction',  '_route' => 'createactivityTemplate',);
-            }
+        if (0 === strpos($pathinfo, '/c')) {
+            if (0 === strpos($pathinfo, '/create')) {
+                // createactivityTemplate
+                if ($pathinfo === '/createactivityTemplate') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createActivityTemplateAction',  '_route' => 'createactivityTemplate',);
+                }
 
-            // createworkerTemplate
-            if ($pathinfo === '/createworkerTemplate') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createWorkerTemplateAction',  '_route' => 'createworkerTemplate',);
-            }
+                // createworkerTemplate
+                if ($pathinfo === '/createworkerTemplate') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createWorkerTemplateAction',  '_route' => 'createworkerTemplate',);
+                }
 
-            // createtaskqueueTemplate
-            if ($pathinfo === '/createtaskqueueTemplate') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createTaskQueueTemplateAction',  '_route' => 'createtaskqueueTemplate',);
-            }
+                // createtaskqueueTemplate
+                if ($pathinfo === '/createtaskqueueTemplate') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createTaskQueueTemplateAction',  '_route' => 'createtaskqueueTemplate',);
+                }
 
-            // createuser
-            if ($pathinfo === '/createuser') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createuserAction',  '_route' => 'createuser',);
-            }
+                // createuser
+                if ($pathinfo === '/createuser') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createuserAction',  '_route' => 'createuser',);
+                }
 
-            if (0 === strpos($pathinfo, '/createproject')) {
                 // createproject
                 if ($pathinfo === '/createproject') {
                     return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createprojecttemplateAction',  '_route' => 'createproject',);
                 }
 
+            }
+
+            // configureproject
+            if ($pathinfo === '/configureproject') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::configureprojectAction',  '_route' => 'configureproject',);
+            }
+
+            if (0 === strpos($pathinfo, '/create')) {
                 // createprojectaction
                 if ($pathinfo === '/createprojectaction') {
                     return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createprojectAction',  '_route' => 'createprojectaction',);
+                }
+
+                // createworker
+                if ($pathinfo === '/createworker') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createworkerAction',  '_route' => 'createworker',);
                 }
 
             }
