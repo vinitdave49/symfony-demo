@@ -32,6 +32,7 @@ class DefaultController extends Controller
      */
     public function loginAction(Request $request)
     {
+
         $loginname = $request->request->get("wLoginId");
         $password = $request->request->get("wPass");
 
@@ -47,7 +48,7 @@ class DefaultController extends Controller
         } else {
             return new Response('<h1>Invalid User Credentials!!!</h1>');
         }
-
+        //return $this->render('cloudadmin/home.html.twig');
     }
     /**
      * @Route("createactivityTemplate", name="createactivityTemplate")
@@ -143,5 +144,26 @@ class DefaultController extends Controller
             ->findBy(array('attributeType'=>2));
 
         return $this->render('cloudadmin/admin/createworker.html.twig', array('textboxes'=>$textboxes, 'checkboxes'=>$checkboxes));
+    }
+    /**
+     * @Route("createactivity", name="createactivity")
+     */
+    public function createactivityAction(Request $request)
+    {
+        return $this->render('cloudadmin/admin/createactivity.html.twig');
+    }
+    /**
+     * @Route("createworkflow", name="createworkflow")
+     */
+    public function createworkflowAction(Request $request)
+    {
+        return $this->render('cloudadmin/admin/createworkflow.html.twig');
+    }
+    /**
+     * @Route("createtaskqueue", name="createtaskqueue")
+     */
+    public function createtaskqueueAction(Request $request)
+    {
+        return $this->render('cloudadmin/admin/createtaskqueue.html.twig');
     }
 }

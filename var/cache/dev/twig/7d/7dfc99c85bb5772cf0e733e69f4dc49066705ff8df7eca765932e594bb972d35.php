@@ -25,46 +25,46 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4e0df2754e39e8c8209733b314eef4b917e9b78634b09fcb57a4abaf00881a81 = $this->env->getExtension("native_profiler");
-        $__internal_4e0df2754e39e8c8209733b314eef4b917e9b78634b09fcb57a4abaf00881a81->enter($__internal_4e0df2754e39e8c8209733b314eef4b917e9b78634b09fcb57a4abaf00881a81_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "cloudadmin/admin/configureproject.html.twig"));
+        $__internal_bd1b3b683af4566a6d0ef867b4821e9a5d29b05885ae55a5dcb74ca390a94f8d = $this->env->getExtension("native_profiler");
+        $__internal_bd1b3b683af4566a6d0ef867b4821e9a5d29b05885ae55a5dcb74ca390a94f8d->enter($__internal_bd1b3b683af4566a6d0ef867b4821e9a5d29b05885ae55a5dcb74ca390a94f8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "cloudadmin/admin/configureproject.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4e0df2754e39e8c8209733b314eef4b917e9b78634b09fcb57a4abaf00881a81->leave($__internal_4e0df2754e39e8c8209733b314eef4b917e9b78634b09fcb57a4abaf00881a81_prof);
+        $__internal_bd1b3b683af4566a6d0ef867b4821e9a5d29b05885ae55a5dcb74ca390a94f8d->leave($__internal_bd1b3b683af4566a6d0ef867b4821e9a5d29b05885ae55a5dcb74ca390a94f8d_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_1db6668299360d685b2a776005380dc646f5c3ed0da7f80d26227631d4654cf9 = $this->env->getExtension("native_profiler");
-        $__internal_1db6668299360d685b2a776005380dc646f5c3ed0da7f80d26227631d4654cf9->enter($__internal_1db6668299360d685b2a776005380dc646f5c3ed0da7f80d26227631d4654cf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_6f7b6b681627a28420fcc0b4900b6267d59cb77ba6f3bf76f880d44a82d3d963 = $this->env->getExtension("native_profiler");
+        $__internal_6f7b6b681627a28420fcc0b4900b6267d59cb77ba6f3bf76f880d44a82d3d963->enter($__internal_6f7b6b681627a28420fcc0b4900b6267d59cb77ba6f3bf76f880d44a82d3d963_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Configure Project";
         
-        $__internal_1db6668299360d685b2a776005380dc646f5c3ed0da7f80d26227631d4654cf9->leave($__internal_1db6668299360d685b2a776005380dc646f5c3ed0da7f80d26227631d4654cf9_prof);
+        $__internal_6f7b6b681627a28420fcc0b4900b6267d59cb77ba6f3bf76f880d44a82d3d963->leave($__internal_6f7b6b681627a28420fcc0b4900b6267d59cb77ba6f3bf76f880d44a82d3d963_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_403929b22a6eeeb2abb633d932dc0781f4bd1bc69376c69026efcf8d0ccd1ff3 = $this->env->getExtension("native_profiler");
-        $__internal_403929b22a6eeeb2abb633d932dc0781f4bd1bc69376c69026efcf8d0ccd1ff3->enter($__internal_403929b22a6eeeb2abb633d932dc0781f4bd1bc69376c69026efcf8d0ccd1ff3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_1138af76d7dbf93b250046a5ebfdbcc157f768c69503b7cd2bbedc4209432a82 = $this->env->getExtension("native_profiler");
+        $__internal_1138af76d7dbf93b250046a5ebfdbcc157f768c69503b7cd2bbedc4209432a82->enter($__internal_1138af76d7dbf93b250046a5ebfdbcc157f768c69503b7cd2bbedc4209432a82_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "
 ";
         
-        $__internal_403929b22a6eeeb2abb633d932dc0781f4bd1bc69376c69026efcf8d0ccd1ff3->leave($__internal_403929b22a6eeeb2abb633d932dc0781f4bd1bc69376c69026efcf8d0ccd1ff3_prof);
+        $__internal_1138af76d7dbf93b250046a5ebfdbcc157f768c69503b7cd2bbedc4209432a82->leave($__internal_1138af76d7dbf93b250046a5ebfdbcc157f768c69503b7cd2bbedc4209432a82_prof);
 
     }
 
     // line 9
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_1f9083800eecbeb69297c4d086df07b77c1753a48cd76b5c886fbc51558a463f = $this->env->getExtension("native_profiler");
-        $__internal_1f9083800eecbeb69297c4d086df07b77c1753a48cd76b5c886fbc51558a463f->enter($__internal_1f9083800eecbeb69297c4d086df07b77c1753a48cd76b5c886fbc51558a463f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_bff365839221b78c80669b030ac9b16e1e0da5d5c470b26f5158cb21a5305fd0 = $this->env->getExtension("native_profiler");
+        $__internal_bff365839221b78c80669b030ac9b16e1e0da5d5c470b26f5158cb21a5305fd0->enter($__internal_bff365839221b78c80669b030ac9b16e1e0da5d5c470b26f5158cb21a5305fd0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 10
         echo "
@@ -75,15 +75,15 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
 \t<script href=\"//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js\"></script>
 ";
         
-        $__internal_1f9083800eecbeb69297c4d086df07b77c1753a48cd76b5c886fbc51558a463f->leave($__internal_1f9083800eecbeb69297c4d086df07b77c1753a48cd76b5c886fbc51558a463f_prof);
+        $__internal_bff365839221b78c80669b030ac9b16e1e0da5d5c470b26f5158cb21a5305fd0->leave($__internal_bff365839221b78c80669b030ac9b16e1e0da5d5c470b26f5158cb21a5305fd0_prof);
 
     }
 
     // line 14
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fe661b9355db2a1fc96df1606927466c11b010e3905fae462b67f47c043af48e = $this->env->getExtension("native_profiler");
-        $__internal_fe661b9355db2a1fc96df1606927466c11b010e3905fae462b67f47c043af48e->enter($__internal_fe661b9355db2a1fc96df1606927466c11b010e3905fae462b67f47c043af48e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_77debeab2f5aad6237f0c159701b4222360c297a9c35494ea1f3f82c7ee6315e = $this->env->getExtension("native_profiler");
+        $__internal_77debeab2f5aad6237f0c159701b4222360c297a9c35494ea1f3f82c7ee6315e->enter($__internal_77debeab2f5aad6237f0c159701b4222360c297a9c35494ea1f3f82c7ee6315e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 15
         echo "    <body class=\"hold-transition skin-red sidebar-mini\">
@@ -123,6 +123,33 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
                                 <i class=\"fa fa-link\"></i>
                                 <span>AdminCommCloud</span>
                             </a>
+                        </li>
+                        <li>
+                            <a href=\"#\">
+                                <i class=\"fa fa-share\"></i>
+                                <span>Templates</span>
+                                <i class=\"fa fa-angle-left pull-right\"></i>
+                            </a>
+                            <ul class=\"treeview-menu menu-open\" style=\"display: none;\">
+                                <li>
+                                    <a href=\"#\" id=\"workertemplate\">
+                                        <i class=\"fa fa-link\"></i>
+                                        <span>Worker Template</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=\"#\" id=\"activityTemplate\">
+                                        <i class=\"fa fa-link\"></i>
+                                        <span>Activity Template</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=\"#\" id=\"taskQueueTemplate\">
+                                        <i class=\"fa fa-link\"></i>
+                                        <span>TaskQueue Template</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href=\"#\">
@@ -169,7 +196,7 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
                 <section class=\"content-header\">
                     <h1>
                 ";
-        // line 97
+        // line 124
         echo twig_escape_filter($this->env, (isset($context["projectname"]) ? $context["projectname"] : $this->getContext($context, "projectname")), "html", null, true);
         echo ": ";
         echo twig_escape_filter($this->env, (isset($context["workspaceid"]) ? $context["workspaceid"] : $this->getContext($context, "workspaceid")), "html", null, true);
@@ -214,17 +241,17 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
     </body>
 ";
         
-        $__internal_fe661b9355db2a1fc96df1606927466c11b010e3905fae462b67f47c043af48e->leave($__internal_fe661b9355db2a1fc96df1606927466c11b010e3905fae462b67f47c043af48e_prof);
+        $__internal_77debeab2f5aad6237f0c159701b4222360c297a9c35494ea1f3f82c7ee6315e->leave($__internal_77debeab2f5aad6237f0c159701b4222360c297a9c35494ea1f3f82c7ee6315e_prof);
 
     }
 
-    // line 138
+    // line 165
     public function block_inlinejavascripts($context, array $blocks = array())
     {
-        $__internal_a9702bb67d3e536cee5694ef395942f9e74ab925e73a1ffee7c39b33d537ebee = $this->env->getExtension("native_profiler");
-        $__internal_a9702bb67d3e536cee5694ef395942f9e74ab925e73a1ffee7c39b33d537ebee->enter($__internal_a9702bb67d3e536cee5694ef395942f9e74ab925e73a1ffee7c39b33d537ebee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "inlinejavascripts"));
+        $__internal_1bd65c8ac26fef71537aab98c32f3d490e6ae49d77c60358c89983ace0813a89 = $this->env->getExtension("native_profiler");
+        $__internal_1bd65c8ac26fef71537aab98c32f3d490e6ae49d77c60358c89983ace0813a89->enter($__internal_1bd65c8ac26fef71537aab98c32f3d490e6ae49d77c60358c89983ace0813a89_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "inlinejavascripts"));
 
-        // line 139
+        // line 166
         echo "\t<script type=\"text/javascript\">
 \t\$(document).ready(function(){
 
@@ -265,11 +292,41 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
                 }
             }
 \t\t});
+
+\t\t\$('#workertemplate').click(function(){
+\t            \$('#createcontainer').load('createworkerTemplate'), function( response, status, xhr ) {
+                if ( status == \"error\" ) {
+                    var msg = \"Sorry but there was an error: \";
+                    console.log( msg + xhr.status + \" \" + xhr.statusText );
+                }
+            }
+\t\t});
+
+\t\t\$('#activityTemplate').click(function(){
+\t\t    //alert (\"Hello\");
+            \$('#createcontainer').load('createactivityTemplate'), function( response, status, xhr ) {
+                if ( status == \"error\" ) {
+                    var msg = \"Sorry but there was an error: \";
+                    console.log( msg + xhr.status + \" \" + xhr.statusText );
+                }
+            }
+\t\t});
+
+\t\t\$('#taskQueueTemplate').click(function(){
+\t\t\t//alert(\"Create TaskQueue Template!!!\");
+            \$('#createcontainer').load('createtaskqueueTemplate'), function( response, status, xhr ) {
+                if ( status == \"error\" ) {
+                    var msg = \"Sorry but there was an error: \";
+                    console.log( msg + xhr.status + \" \" + xhr.statusText );
+                }
+            }
+\t\t});
+
 \t});
 \t</script>
 ";
         
-        $__internal_a9702bb67d3e536cee5694ef395942f9e74ab925e73a1ffee7c39b33d537ebee->leave($__internal_a9702bb67d3e536cee5694ef395942f9e74ab925e73a1ffee7c39b33d537ebee_prof);
+        $__internal_1bd65c8ac26fef71537aab98c32f3d490e6ae49d77c60358c89983ace0813a89->leave($__internal_1bd65c8ac26fef71537aab98c32f3d490e6ae49d77c60358c89983ace0813a89_prof);
 
     }
 
@@ -285,7 +342,7 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
 
     public function getDebugInfo()
     {
-        return array (  228 => 139,  222 => 138,  173 => 97,  89 => 15,  83 => 14,  73 => 11,  70 => 10,  64 => 9,  56 => 6,  50 => 5,  38 => 3,  11 => 1,);
+        return array (  255 => 166,  249 => 165,  200 => 124,  89 => 15,  83 => 14,  73 => 11,  70 => 10,  64 => 9,  56 => 6,  50 => 5,  38 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -339,6 +396,33 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
 /*                                 <i class="fa fa-link"></i>*/
 /*                                 <span>AdminCommCloud</span>*/
 /*                             </a>*/
+/*                         </li>*/
+/*                         <li>*/
+/*                             <a href="#">*/
+/*                                 <i class="fa fa-share"></i>*/
+/*                                 <span>Templates</span>*/
+/*                                 <i class="fa fa-angle-left pull-right"></i>*/
+/*                             </a>*/
+/*                             <ul class="treeview-menu menu-open" style="display: none;">*/
+/*                                 <li>*/
+/*                                     <a href="#" id="workertemplate">*/
+/*                                         <i class="fa fa-link"></i>*/
+/*                                         <span>Worker Template</span>*/
+/*                                     </a>*/
+/*                                 </li>*/
+/*                                 <li>*/
+/*                                     <a href="#" id="activityTemplate">*/
+/*                                         <i class="fa fa-link"></i>*/
+/*                                         <span>Activity Template</span>*/
+/*                                     </a>*/
+/*                                 </li>*/
+/*                                 <li>*/
+/*                                     <a href="#" id="taskQueueTemplate">*/
+/*                                         <i class="fa fa-link"></i>*/
+/*                                         <span>TaskQueue Template</span>*/
+/*                                     </a>*/
+/*                                 </li>*/
+/*                             </ul>*/
 /*                         </li>*/
 /*                         <li>*/
 /*                             <a href="#">*/
@@ -466,6 +550,36 @@ class __TwigTemplate_dc963710fed432c1c2575690ea7fc53ed0beb07dcd9fe289c0c09c0e247
 /*                 }*/
 /*             }*/
 /* 		});*/
+/* */
+/* 		$('#workertemplate').click(function(){*/
+/* 	            $('#createcontainer').load('createworkerTemplate'), function( response, status, xhr ) {*/
+/*                 if ( status == "error" ) {*/
+/*                     var msg = "Sorry but there was an error: ";*/
+/*                     console.log( msg + xhr.status + " " + xhr.statusText );*/
+/*                 }*/
+/*             }*/
+/* 		});*/
+/* */
+/* 		$('#activityTemplate').click(function(){*/
+/* 		    //alert ("Hello");*/
+/*             $('#createcontainer').load('createactivityTemplate'), function( response, status, xhr ) {*/
+/*                 if ( status == "error" ) {*/
+/*                     var msg = "Sorry but there was an error: ";*/
+/*                     console.log( msg + xhr.status + " " + xhr.statusText );*/
+/*                 }*/
+/*             }*/
+/* 		});*/
+/* */
+/* 		$('#taskQueueTemplate').click(function(){*/
+/* 			//alert("Create TaskQueue Template!!!");*/
+/*             $('#createcontainer').load('createtaskqueueTemplate'), function( response, status, xhr ) {*/
+/*                 if ( status == "error" ) {*/
+/*                     var msg = "Sorry but there was an error: ";*/
+/*                     console.log( msg + xhr.status + " " + xhr.statusText );*/
+/*                 }*/
+/*             }*/
+/* 		});*/
+/* */
 /* 	});*/
 /* 	</script>*/
 /* {% endblock %}*/

@@ -53,6 +53,33 @@
                         <li>
                             <a href="#">
                                 <i class="fa fa-share"></i>
+                                <span>Templates</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu menu-open" style="display: none;">
+                                <li>
+                                    <a href="#" id="workertemplate">
+                                        <i class="fa fa-link"></i>
+                                        <span>Worker Template</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="activityTemplate">
+                                        <i class="fa fa-link"></i>
+                                        <span>Activity Template</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="taskQueueTemplate">
+                                        <i class="fa fa-link"></i>
+                                        <span>TaskQueue Template</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-share"></i>
                                 <span>Create/Edit</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
@@ -176,6 +203,36 @@
                 }
             }
 		});
+
+		$('#workertemplate').click(function(){
+	            $('#createcontainer').load('createworkerTemplate'), function( response, status, xhr ) {
+                if ( status == "error" ) {
+                    var msg = "Sorry but there was an error: ";
+                    console.log( msg + xhr.status + " " + xhr.statusText );
+                }
+            }
+		});
+
+		$('#activityTemplate').click(function(){
+		    //alert ("Hello");
+            $('#createcontainer').load('createactivityTemplate'), function( response, status, xhr ) {
+                if ( status == "error" ) {
+                    var msg = "Sorry but there was an error: ";
+                    console.log( msg + xhr.status + " " + xhr.statusText );
+                }
+            }
+		});
+
+		$('#taskQueueTemplate').click(function(){
+			//alert("Create TaskQueue Template!!!");
+            $('#createcontainer').load('createtaskqueueTemplate'), function( response, status, xhr ) {
+                if ( status == "error" ) {
+                    var msg = "Sorry but there was an error: ";
+                    console.log( msg + xhr.status + " " + xhr.statusText );
+                }
+            }
+		});
+
 	});
 	</script>
 {% endblock %}

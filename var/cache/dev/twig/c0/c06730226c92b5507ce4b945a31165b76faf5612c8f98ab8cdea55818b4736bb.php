@@ -25,46 +25,46 @@ class __TwigTemplate_355804f0a2da96cbf9ce16b6185e4202995bf18ef95d43967ad1f249dca
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_30766a170768bea862828e5466763aa8ffc85499e5c824ab4057de31c480838f = $this->env->getExtension("native_profiler");
-        $__internal_30766a170768bea862828e5466763aa8ffc85499e5c824ab4057de31c480838f->enter($__internal_30766a170768bea862828e5466763aa8ffc85499e5c824ab4057de31c480838f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "cloudadmin/home.html.twig"));
+        $__internal_ea03fbeafd30d9a8b7c10ad7a3673dabb603ac692668926a5807f87b18934cc2 = $this->env->getExtension("native_profiler");
+        $__internal_ea03fbeafd30d9a8b7c10ad7a3673dabb603ac692668926a5807f87b18934cc2->enter($__internal_ea03fbeafd30d9a8b7c10ad7a3673dabb603ac692668926a5807f87b18934cc2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "cloudadmin/home.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_30766a170768bea862828e5466763aa8ffc85499e5c824ab4057de31c480838f->leave($__internal_30766a170768bea862828e5466763aa8ffc85499e5c824ab4057de31c480838f_prof);
+        $__internal_ea03fbeafd30d9a8b7c10ad7a3673dabb603ac692668926a5807f87b18934cc2->leave($__internal_ea03fbeafd30d9a8b7c10ad7a3673dabb603ac692668926a5807f87b18934cc2_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_f35c8629023d2e59df80f8e4c08f70e3a0b9f91762e40a5895b23ba2c3c000f7 = $this->env->getExtension("native_profiler");
-        $__internal_f35c8629023d2e59df80f8e4c08f70e3a0b9f91762e40a5895b23ba2c3c000f7->enter($__internal_f35c8629023d2e59df80f8e4c08f70e3a0b9f91762e40a5895b23ba2c3c000f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_087912837513fa9b3ab92a812ec568341e6d61c586616117d83caf9dcf1c7c0a = $this->env->getExtension("native_profiler");
+        $__internal_087912837513fa9b3ab92a812ec568341e6d61c586616117d83caf9dcf1c7c0a->enter($__internal_087912837513fa9b3ab92a812ec568341e6d61c586616117d83caf9dcf1c7c0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Cloud Admin - Home";
         
-        $__internal_f35c8629023d2e59df80f8e4c08f70e3a0b9f91762e40a5895b23ba2c3c000f7->leave($__internal_f35c8629023d2e59df80f8e4c08f70e3a0b9f91762e40a5895b23ba2c3c000f7_prof);
+        $__internal_087912837513fa9b3ab92a812ec568341e6d61c586616117d83caf9dcf1c7c0a->leave($__internal_087912837513fa9b3ab92a812ec568341e6d61c586616117d83caf9dcf1c7c0a_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_26569b49ad3205dbef9bc281ebcd4784ea1c5e06d82ee2830785af80f46fd4d2 = $this->env->getExtension("native_profiler");
-        $__internal_26569b49ad3205dbef9bc281ebcd4784ea1c5e06d82ee2830785af80f46fd4d2->enter($__internal_26569b49ad3205dbef9bc281ebcd4784ea1c5e06d82ee2830785af80f46fd4d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_a096cc5bbb47797742d531a79cf76e849e64dbdac4c40f5c85f1ed88727e878f = $this->env->getExtension("native_profiler");
+        $__internal_a096cc5bbb47797742d531a79cf76e849e64dbdac4c40f5c85f1ed88727e878f->enter($__internal_a096cc5bbb47797742d531a79cf76e849e64dbdac4c40f5c85f1ed88727e878f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "
 ";
         
-        $__internal_26569b49ad3205dbef9bc281ebcd4784ea1c5e06d82ee2830785af80f46fd4d2->leave($__internal_26569b49ad3205dbef9bc281ebcd4784ea1c5e06d82ee2830785af80f46fd4d2_prof);
+        $__internal_a096cc5bbb47797742d531a79cf76e849e64dbdac4c40f5c85f1ed88727e878f->leave($__internal_a096cc5bbb47797742d531a79cf76e849e64dbdac4c40f5c85f1ed88727e878f_prof);
 
     }
 
     // line 9
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_3baf271ddd8fd5abf35abb9564b675635311f11050dedc730377d33390bf6d78 = $this->env->getExtension("native_profiler");
-        $__internal_3baf271ddd8fd5abf35abb9564b675635311f11050dedc730377d33390bf6d78->enter($__internal_3baf271ddd8fd5abf35abb9564b675635311f11050dedc730377d33390bf6d78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_e6fc62edcb635da49845ee3ae8a2aec2bb1050086619dfeee3f5cb1a2f735b93 = $this->env->getExtension("native_profiler");
+        $__internal_e6fc62edcb635da49845ee3ae8a2aec2bb1050086619dfeee3f5cb1a2f735b93->enter($__internal_e6fc62edcb635da49845ee3ae8a2aec2bb1050086619dfeee3f5cb1a2f735b93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 10
         echo "
@@ -75,15 +75,15 @@ class __TwigTemplate_355804f0a2da96cbf9ce16b6185e4202995bf18ef95d43967ad1f249dca
 \t<script href=\"//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js\"></script>
 ";
         
-        $__internal_3baf271ddd8fd5abf35abb9564b675635311f11050dedc730377d33390bf6d78->leave($__internal_3baf271ddd8fd5abf35abb9564b675635311f11050dedc730377d33390bf6d78_prof);
+        $__internal_e6fc62edcb635da49845ee3ae8a2aec2bb1050086619dfeee3f5cb1a2f735b93->leave($__internal_e6fc62edcb635da49845ee3ae8a2aec2bb1050086619dfeee3f5cb1a2f735b93_prof);
 
     }
 
     // line 15
     public function block_body($context, array $blocks = array())
     {
-        $__internal_94a7d8f654492d6603d4cfdb6aa9daa8b3d165cdffe75837ac9d72f51badd31d = $this->env->getExtension("native_profiler");
-        $__internal_94a7d8f654492d6603d4cfdb6aa9daa8b3d165cdffe75837ac9d72f51badd31d->enter($__internal_94a7d8f654492d6603d4cfdb6aa9daa8b3d165cdffe75837ac9d72f51badd31d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6c3f1f7fc69584f6b4e66919ec820c892b550e431e061657805c1121f93d452b = $this->env->getExtension("native_profiler");
+        $__internal_6c3f1f7fc69584f6b4e66919ec820c892b550e431e061657805c1121f93d452b->enter($__internal_6c3f1f7fc69584f6b4e66919ec820c892b550e431e061657805c1121f93d452b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 16
         echo "    <body class=\"hold-transition skin-red sidebar-mini\">
@@ -146,33 +146,6 @@ class __TwigTemplate_355804f0a2da96cbf9ce16b6185e4202995bf18ef95d43967ad1f249dca
                                 <i class=\"fa fa-link\"></i>
                                 <span>AdminCommCloud</span>
                             </a>
-                        </li>
-                        <li>
-                            <a href=\"#\">
-                                <i class=\"fa fa-share\"></i>
-                                <span>Templates</span>
-                                <i class=\"fa fa-angle-left pull-right\"></i>
-                            </a>
-                            <ul class=\"treeview-menu menu-open\" style=\"display: none;\">
-                                <li>
-                                    <a href=\"#\" id=\"workertemplate\">
-                                        <i class=\"fa fa-link\"></i>
-                                        <span>Worker Template</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"#\" id=\"activityTemplate\">
-                                        <i class=\"fa fa-link\"></i>
-                                        <span>Activity Template</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"#\" id=\"taskQueueTemplate\">
-                                        <i class=\"fa fa-link\"></i>
-                                        <span>TaskQueue Template</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li>
                             <a href=\"#\">
@@ -241,17 +214,17 @@ class __TwigTemplate_355804f0a2da96cbf9ce16b6185e4202995bf18ef95d43967ad1f249dca
     </body>
 ";
         
-        $__internal_94a7d8f654492d6603d4cfdb6aa9daa8b3d165cdffe75837ac9d72f51badd31d->leave($__internal_94a7d8f654492d6603d4cfdb6aa9daa8b3d165cdffe75837ac9d72f51badd31d_prof);
+        $__internal_6c3f1f7fc69584f6b4e66919ec820c892b550e431e061657805c1121f93d452b->leave($__internal_6c3f1f7fc69584f6b4e66919ec820c892b550e431e061657805c1121f93d452b_prof);
 
     }
 
-    // line 168
+    // line 141
     public function block_inlinejavascripts($context, array $blocks = array())
     {
-        $__internal_7ef63ab30c7facef43a3818955a499959ad3860948ddca262c7804a1db6f9fcb = $this->env->getExtension("native_profiler");
-        $__internal_7ef63ab30c7facef43a3818955a499959ad3860948ddca262c7804a1db6f9fcb->enter($__internal_7ef63ab30c7facef43a3818955a499959ad3860948ddca262c7804a1db6f9fcb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "inlinejavascripts"));
+        $__internal_6c38ae1b99bf54f3bb821c0b2fc5802f750f7a81f1fbb67d4b52db0ec29e4e28 = $this->env->getExtension("native_profiler");
+        $__internal_6c38ae1b99bf54f3bb821c0b2fc5802f750f7a81f1fbb67d4b52db0ec29e4e28->enter($__internal_6c38ae1b99bf54f3bb821c0b2fc5802f750f7a81f1fbb67d4b52db0ec29e4e28_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "inlinejavascripts"));
 
-        // line 169
+        // line 142
         echo "\t<script type=\"text/javascript\">
 \t\$(document).ready(function(){
 
@@ -263,40 +236,11 @@ class __TwigTemplate_355804f0a2da96cbf9ce16b6185e4202995bf18ef95d43967ad1f249dca
                 }
             }
 \t\t});
-
-\t\t\$('#workertemplate').click(function(){
-\t            \$('#datacontainer').load('createworkerTemplate'), function( response, status, xhr ) {
-                if ( status == \"error\" ) {
-                    var msg = \"Sorry but there was an error: \";
-                    console.log( msg + xhr.status + \" \" + xhr.statusText );
-                }
-            }
-\t\t});
-
-\t\t\$('#activityTemplate').click(function(){
-\t\t    //alert (\"Hello\");
-            \$('#datacontainer').load('createactivityTemplate'), function( response, status, xhr ) {
-                if ( status == \"error\" ) {
-                    var msg = \"Sorry but there was an error: \";
-                    console.log( msg + xhr.status + \" \" + xhr.statusText );
-                }
-            }
-\t\t});
-
-\t\t\$('#taskQueueTemplate').click(function(){
-\t\t\t//alert(\"Create TaskQueue Template!!!\");
-            \$('#datacontainer').load('createtaskqueueTemplate'), function( response, status, xhr ) {
-                if ( status == \"error\" ) {
-                    var msg = \"Sorry but there was an error: \";
-                    console.log( msg + xhr.status + \" \" + xhr.statusText );
-                }
-            }
-\t\t});
 \t});
 \t</script>
 ";
         
-        $__internal_7ef63ab30c7facef43a3818955a499959ad3860948ddca262c7804a1db6f9fcb->leave($__internal_7ef63ab30c7facef43a3818955a499959ad3860948ddca262c7804a1db6f9fcb_prof);
+        $__internal_6c38ae1b99bf54f3bb821c0b2fc5802f750f7a81f1fbb67d4b52db0ec29e4e28->leave($__internal_6c38ae1b99bf54f3bb821c0b2fc5802f750f7a81f1fbb67d4b52db0ec29e4e28_prof);
 
     }
 
@@ -312,7 +256,7 @@ class __TwigTemplate_355804f0a2da96cbf9ce16b6185e4202995bf18ef95d43967ad1f249dca
 
     public function getDebugInfo()
     {
-        return array (  255 => 169,  249 => 168,  118 => 43,  89 => 16,  83 => 15,  73 => 11,  70 => 10,  64 => 9,  56 => 6,  50 => 5,  38 => 3,  11 => 1,);
+        return array (  228 => 142,  222 => 141,  118 => 43,  89 => 16,  83 => 15,  73 => 11,  70 => 10,  64 => 9,  56 => 6,  50 => 5,  38 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -391,33 +335,6 @@ class __TwigTemplate_355804f0a2da96cbf9ce16b6185e4202995bf18ef95d43967ad1f249dca
 /*                         <li>*/
 /*                             <a href="#">*/
 /*                                 <i class="fa fa-share"></i>*/
-/*                                 <span>Templates</span>*/
-/*                                 <i class="fa fa-angle-left pull-right"></i>*/
-/*                             </a>*/
-/*                             <ul class="treeview-menu menu-open" style="display: none;">*/
-/*                                 <li>*/
-/*                                     <a href="#" id="workertemplate">*/
-/*                                         <i class="fa fa-link"></i>*/
-/*                                         <span>Worker Template</span>*/
-/*                                     </a>*/
-/*                                 </li>*/
-/*                                 <li>*/
-/*                                     <a href="#" id="activityTemplate">*/
-/*                                         <i class="fa fa-link"></i>*/
-/*                                         <span>Activity Template</span>*/
-/*                                     </a>*/
-/*                                 </li>*/
-/*                                 <li>*/
-/*                                     <a href="#" id="taskQueueTemplate">*/
-/*                                         <i class="fa fa-link"></i>*/
-/*                                         <span>TaskQueue Template</span>*/
-/*                                     </a>*/
-/*                                 </li>*/
-/*                             </ul>*/
-/*                         </li>*/
-/*                         <li>*/
-/*                             <a href="#">*/
-/*                                 <i class="fa fa-share"></i>*/
 /*                                 <span>Create</span>*/
 /*                                 <i class="fa fa-angle-left pull-right"></i>*/
 /*                             </a>*/
@@ -488,35 +405,6 @@ class __TwigTemplate_355804f0a2da96cbf9ce16b6185e4202995bf18ef95d43967ad1f249dca
 /* */
 /* 		$('#createProject').click(function(){*/
 /* 	            $('#datacontainer').load('createproject'), function( response, status, xhr ) {*/
-/*                 if ( status == "error" ) {*/
-/*                     var msg = "Sorry but there was an error: ";*/
-/*                     console.log( msg + xhr.status + " " + xhr.statusText );*/
-/*                 }*/
-/*             }*/
-/* 		});*/
-/* */
-/* 		$('#workertemplate').click(function(){*/
-/* 	            $('#datacontainer').load('createworkerTemplate'), function( response, status, xhr ) {*/
-/*                 if ( status == "error" ) {*/
-/*                     var msg = "Sorry but there was an error: ";*/
-/*                     console.log( msg + xhr.status + " " + xhr.statusText );*/
-/*                 }*/
-/*             }*/
-/* 		});*/
-/* */
-/* 		$('#activityTemplate').click(function(){*/
-/* 		    //alert ("Hello");*/
-/*             $('#datacontainer').load('createactivityTemplate'), function( response, status, xhr ) {*/
-/*                 if ( status == "error" ) {*/
-/*                     var msg = "Sorry but there was an error: ";*/
-/*                     console.log( msg + xhr.status + " " + xhr.statusText );*/
-/*                 }*/
-/*             }*/
-/* 		});*/
-/* */
-/* 		$('#taskQueueTemplate').click(function(){*/
-/* 			//alert("Create TaskQueue Template!!!");*/
-/*             $('#datacontainer').load('createtaskqueueTemplate'), function( response, status, xhr ) {*/
 /*                 if ( status == "error" ) {*/
 /*                     var msg = "Sorry but there was an error: ";*/
 /*                     console.log( msg + xhr.status + " " + xhr.statusText );*/

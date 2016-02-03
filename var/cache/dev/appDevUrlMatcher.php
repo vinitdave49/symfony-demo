@@ -164,6 +164,21 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createworkerAction',  '_route' => 'createworker',);
                 }
 
+                // createactivity
+                if ($pathinfo === '/createactivity') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createactivityAction',  '_route' => 'createactivity',);
+                }
+
+                // createworkflow
+                if ($pathinfo === '/createworkflow') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createworkflowAction',  '_route' => 'createworkflow',);
+                }
+
+                // createtaskqueue
+                if ($pathinfo === '/createtaskqueue') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createtaskqueueAction',  '_route' => 'createtaskqueue',);
+                }
+
             }
 
         }
