@@ -10,3 +10,6 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
+    sid: "AC0f18494502dee91457252ff7b2bada6a"
+    authToken: "2f430f7691acb543889ef3a721c1c096"
+    workspaceSid: "WSce7860a1dd3d977493b7e15bead4e320"

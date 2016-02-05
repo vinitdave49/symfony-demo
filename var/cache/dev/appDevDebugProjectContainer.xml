@@ -16,6 +16,7 @@
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
+      <parameter key="CloudTwilioBundle">Cloud\TwilioBundle\CloudTwilioBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -33,6 +34,9 @@
     <parameter key="mailer_user">null</parameter>
     <parameter key="mailer_password">null</parameter>
     <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
+    <parameter key="sid">AC0f18494502dee91457252ff7b2bada6a</parameter>
+    <parameter key="authtoken">2f430f7691acb543889ef3a721c1c096</parameter>
+    <parameter key="workspacesid">WSce7860a1dd3d977493b7e15bead4e320</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
@@ -1468,7 +1472,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>56af4f866553c6.91221989</argument>
+            <argument>56b4405dcddc98.77890971</argument>
           </service>
         </argument>
       </argument>
@@ -1597,7 +1601,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>56af4f866553c6.91221989</argument>
+            <argument>56b4405dcddc98.77890971</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2095,6 +2099,28 @@
       <argument type="service" id="security.token_storage" on-invalid="null"/>
       <argument type="service" id="security.authorization_checker" on-invalid="null"/>
     </service>
+    <service id="cloud_twilio.twilio_api" class="Cloud\TwilioBundle\Service\TwilioWrapper">
+      <argument>AC0f18494502dee91457252ff7b2bada6a</argument>
+      <argument>2f430f7691acb543889ef3a721c1c096</argument>
+      <argument>5</argument>
+      <argument>2010-04-01</argument>
+    </service>
+    <service id="cloud_twilio.twilio_capability" class="Cloud\TwilioBundle\Service\TwilioCapabilityWrapper">
+      <argument>AC0f18494502dee91457252ff7b2bada6a</argument>
+      <argument>2f430f7691acb543889ef3a721c1c096</argument>
+    </service>
+    <service id="cloud_twilio.twilio_taskrouter" class="Cloud\TwilioBundle\Service\TwilioTaskRouterWrapper">
+      <argument>AC0f18494502dee91457252ff7b2bada6a</argument>
+      <argument>2f430f7691acb543889ef3a721c1c096</argument>
+      <argument>WSce7860a1dd3d977493b7e15bead4e320</argument>
+      <argument>5</argument>
+    </service>
+    <service id="cloud_twilio.twilio_taskrouter_worker_capability" class="Cloud\TwilioBundle\Service\TwilioTaskRouterWorkerCapabilityWrapper">
+      <argument>AC0f18494502dee91457252ff7b2bada6a</argument>
+      <argument>2f430f7691acb543889ef3a721c1c096</argument>
+      <argument>WSce7860a1dd3d977493b7e15bead4e320</argument>
+      <argument>WK2d358d220ef9e662b9f3dd7c8cf85d7c</argument>
+    </service>
     <service id="data_collector.dump" class="Symfony\Component\HttpKernel\DataCollector\DumpDataCollector">
       <tag name="data_collector" id="dump" template="@Debug/Profiler/dump.html.twig" priority="240"/>
       <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
@@ -2392,6 +2418,10 @@
       <call method="addPath">
         <argument>/home/ubuntu/workspace/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/ubuntu/workspace/src/Cloud/TwilioBundle/Resources/views</argument>
+        <argument>CloudTwilio</argument>
       </call>
       <call method="addPath">
         <argument>/home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>

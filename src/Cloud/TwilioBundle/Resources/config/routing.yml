@@ -1,0 +1,3 @@
+cloud_twilio_homepage:
+    path:     /
+    defaults: { _controller: CloudTwilioBundle:Default:index }

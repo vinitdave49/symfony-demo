@@ -67,3 +67,12 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+#CloudTwilio Configuration
+cloud_twilio:
+    sid: "AC0f18494502dee91457252ff7b2bada6a"
+    authToken: "2f430f7691acb543889ef3a721c1c096"
+    workspaceSid: "WSce7860a1dd3d977493b7e15bead4e320"
+    version: "2010-04-01"
+    retryattempts: 5
+    workerSid: "WK2d358d220ef9e662b9f3dd7c8cf85d7c"

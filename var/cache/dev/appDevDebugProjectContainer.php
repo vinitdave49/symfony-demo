@@ -36,6 +36,10 @@ class appDevDebugProjectContainer extends Container
             'assets.packages' => 'getAssets_PackagesService',
             'cache_clearer' => 'getCacheClearerService',
             'cache_warmer' => 'getCacheWarmerService',
+            'cloud_twilio.twilio_api' => 'getCloudTwilio_TwilioApiService',
+            'cloud_twilio.twilio_capability' => 'getCloudTwilio_TwilioCapabilityService',
+            'cloud_twilio.twilio_taskrouter' => 'getCloudTwilio_TwilioTaskrouterService',
+            'cloud_twilio.twilio_taskrouter_worker_capability' => 'getCloudTwilio_TwilioTaskrouterWorkerCapabilityService',
             'config_cache_factory' => 'getConfigCacheFactoryService',
             'controller_name_converter' => 'getControllerNameConverterService',
             'data_collector.dump' => 'getDataCollector_DumpService',
@@ -332,6 +336,58 @@ class appDevDebugProjectContainer extends Container
         $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, ($this->targetDirs[3].'/app/Resources'));
 
         return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('templating.locator')), 1 => $this->get('kernel.class_cache.cache_warmer'), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TranslationsCacheWarmer($this->get('translator')), 3 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 4 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c, array()), 5 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer($this->get('twig'), new \Symfony\Bundle\TwigBundle\TemplateIterator($a, ($this->targetDirs[3].'/app'), array())), 6 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine'))));
+    }
+
+    /**
+     * Gets the 'cloud_twilio.twilio_api' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Cloud\TwilioBundle\Service\TwilioWrapper A Cloud\TwilioBundle\Service\TwilioWrapper instance.
+     */
+    protected function getCloudTwilio_TwilioApiService()
+    {
+        return $this->services['cloud_twilio.twilio_api'] = new \Cloud\TwilioBundle\Service\TwilioWrapper('AC0f18494502dee91457252ff7b2bada6a', '2f430f7691acb543889ef3a721c1c096', 5, '2010-04-01');
+    }
+
+    /**
+     * Gets the 'cloud_twilio.twilio_capability' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Cloud\TwilioBundle\Service\TwilioCapabilityWrapper A Cloud\TwilioBundle\Service\TwilioCapabilityWrapper instance.
+     */
+    protected function getCloudTwilio_TwilioCapabilityService()
+    {
+        return $this->services['cloud_twilio.twilio_capability'] = new \Cloud\TwilioBundle\Service\TwilioCapabilityWrapper('AC0f18494502dee91457252ff7b2bada6a', '2f430f7691acb543889ef3a721c1c096');
+    }
+
+    /**
+     * Gets the 'cloud_twilio.twilio_taskrouter' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Cloud\TwilioBundle\Service\TwilioTaskRouterWrapper A Cloud\TwilioBundle\Service\TwilioTaskRouterWrapper instance.
+     */
+    protected function getCloudTwilio_TwilioTaskrouterService()
+    {
+        return $this->services['cloud_twilio.twilio_taskrouter'] = new \Cloud\TwilioBundle\Service\TwilioTaskRouterWrapper('AC0f18494502dee91457252ff7b2bada6a', '2f430f7691acb543889ef3a721c1c096', 'WSce7860a1dd3d977493b7e15bead4e320', 5);
+    }
+
+    /**
+     * Gets the 'cloud_twilio.twilio_taskrouter_worker_capability' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Cloud\TwilioBundle\Service\TwilioTaskRouterWorkerCapabilityWrapper A Cloud\TwilioBundle\Service\TwilioTaskRouterWorkerCapabilityWrapper instance.
+     */
+    protected function getCloudTwilio_TwilioTaskrouterWorkerCapabilityService()
+    {
+        return $this->services['cloud_twilio.twilio_taskrouter_worker_capability'] = new \Cloud\TwilioBundle\Service\TwilioTaskRouterWorkerCapabilityWrapper('AC0f18494502dee91457252ff7b2bada6a', '2f430f7691acb543889ef3a721c1c096', 'WSce7860a1dd3d977493b7e15bead4e320', 'WK2d358d220ef9e662b9f3dd7c8cf85d7c');
     }
 
     /**
@@ -1929,7 +1985,7 @@ class appDevDebugProjectContainer extends Container
 
         $e = new \Symfony\Component\Security\Http\AccessMap();
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider()), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '56af4f866553c6.91221989', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d), 'main', NULL, NULL, NULL, $a, false));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider()), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '56b4405dcddc98.77890971', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d), 'main', NULL, NULL, NULL, $a, false));
     }
 
     /**
@@ -2929,6 +2985,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views'), 'Twig');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/swiftmailer-bundle/Resources/views'), 'Swiftmailer');
         $instance->addPath(($this->targetDirs[3].'/vendor/doctrine/doctrine-bundle/Resources/views'), 'Doctrine');
+        $instance->addPath(($this->targetDirs[3].'/src/Cloud/TwilioBundle/Resources/views'), 'CloudTwilio');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views'), 'Debug');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views'), 'WebProfiler');
         $instance->addPath(($this->targetDirs[3].'/app/Resources/views'));
@@ -3209,7 +3266,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('56af4f866553c6.91221989')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('56b4405dcddc98.77890971')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3402,6 +3459,7 @@ class appDevDebugProjectContainer extends Container
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
                 'AppBundle' => 'AppBundle\\AppBundle',
+                'CloudTwilioBundle' => 'Cloud\\TwilioBundle\\CloudTwilioBundle',
                 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3419,6 +3477,9 @@ class appDevDebugProjectContainer extends Container
             'mailer_user' => NULL,
             'mailer_password' => NULL,
             'secret' => 'ThisTokenIsNotSoSecretChangeIt',
+            'sid' => 'AC0f18494502dee91457252ff7b2bada6a',
+            'authtoken' => '2f430f7691acb543889ef3a721c1c096',
+            'workspacesid' => 'WSce7860a1dd3d977493b7e15bead4e320',
             'locale' => 'en',
             'fragment.renderer.hinclude.global_template' => NULL,
             'fragment.path' => '/_fragment',
